@@ -1,2 +1,6 @@
-# ativitades-de-modelagem-banco-de-dados
- exemplo de exercicios de banco de dados
+# Exemplo de exercicio de banco de dados
+
+## Exemplo de modelagem conceitual
+
+
+## Exemplo de modelagem logico
