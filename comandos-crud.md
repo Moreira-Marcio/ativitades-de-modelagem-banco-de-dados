@@ -131,3 +131,15 @@ SELECT nome, descricao FROM produtos
 WHERE fabricante_id IN (3,5);
 ```
 
+### operador não (not)
+
+```sql
+--- nome,descrição e preço de todos os produtoas exeto da positino
+SELECT nome,descricao,preco FROM produtos
+WHERE NOT fabricante_id =8;
+
+---versão usando operador relacional de diferença
+SELECT nome,descricao,preco FROM produtos
+WHERE fabricante_id !=8;
+```
+
