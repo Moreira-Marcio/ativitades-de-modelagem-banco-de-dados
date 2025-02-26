@@ -157,5 +157,18 @@ WHERE preco < 2000 AND fabricante_id != 7;
 
 UPDATE produtos SET quantidade = 5
 where id = 6;
+
 ```
 
+### delete (fabricantes e produtos)
+
+#### ☠️ perigo  
+#### sempre use a clausula where
+
+```sql
+DELETE FROM fabricantes where id = 4;
+DELETE FROM fabricantes where id = 1;
+
+DELETE FROM produtos WHERE id = 4;
+DELETE FROM fabricantes where id = 3;
+```
