@@ -65,4 +65,13 @@ VALUES(
  UPDATE detalhes SET bilheteria= 14600000.00 , orcamento = 1000000.00
 where id = 1;
 
+ UPDATE detalhes SET bilheteria= 80000000.00 , orcamento = 28400000.00
+where id = 2;
+
+ UPDATE detalhes SET bilheteria= 100000000.00  , orcamento = 85000000.00
+where id = 3;
+
+ UPDATE detalhes SET bilheteria= 150000000.00 , orcamento = 120207127.00
+where id = 4;
+
 ```
