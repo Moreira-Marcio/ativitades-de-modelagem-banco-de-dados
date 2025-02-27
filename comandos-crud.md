@@ -217,5 +217,48 @@ SELECT COUNT(DISTINCT fabricante_id) AS "Quantidade de fabricantes com produtos"
 SELECT nome,preco,quantidade, (preco*quantidade) AS total FROM produtos;
 
 
+```
+
+## consultas (queries) em duas ou mais tabelas relacionadas(junção/join)
+
+### nome do produto e o nome do fabricante
+
+```sql 
+SELECT produtos.nome AS produto, fabricantes.nome AS fabricante
+FROM produtos JOIN fabricantes
+ON produtos.fabricante_id = fabricantes.id
+
+
+--- segmentação/ agrupamento de resultados
+
+SELECT fabricante_id, SUM(preco) AS total FROM  produtos
+GROUP BY fabricante_id
+
+```
+
+## nome do produto preço do produto, nome do fabricanteordenador pelo nome do produto e pelo fabricante
+
+
+```sql
+SELECT produtos.nome AS produto,
+ produtos.preco AS preço , 
+ fabricantes.nome AS fabricante
+FROM produtos JOIN fabricantes
+ON produtos.fabricante_id = fabricantes.id
+ORDER BY produto ASC, preço DESC;
+
+```
+
+### fabricante, soma dos preços , quantidade de produtos por fabricante 
+
+```sql
+SELECT fabricantes.nome AS fabricante,
+ produtos.preco AS preço , 
+ SUM(produtos.preco) AS total,
+ COUNT(produtos.fabricante_id) AS "quantidade de produtos"
+FROM produtos RIGHT JOIN fabricantes
+ON produtos.fabricante_id = fabricantes.id
+GROUP BY fabricante
+ORDER BY total;
 
 ```

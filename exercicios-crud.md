@@ -77,4 +77,18 @@ where id = 4;
 SELECT titulo , lancamento, genero_id FROM filmes
 WHERE id IN (2,4);
 
+
+SELECT filmes.titulo AS "nome do filme" , generos.nome AS genero
+FROM filmes JOIN generos
+ON filmes.genero_id = generos.id
+
+SELECT filmes.titulo AS "nome do filme" , detalhes.sinopse
+FROM filmes JOIN detalhes
+ON detalhes.filme_id = filmes.id
+
+SELECT filmes.titulo AS "nome do filme" , detalhes.sinopse AS "resumo do filme" , generos.nome AS genero 
+FROM filmes JOIN detalhes JOIN generos
+ON detalhes.filme_id = filmes.id,
+ON film,es
+
 ```
