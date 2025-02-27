@@ -201,4 +201,21 @@ SELECT REPLACE(FORMAT(SUM(preco),2),",",".") AS total FROM produtos;
 
 SELECT nome AS produto, preco as preço FROM produtos;
 SELECT nome  produto, preco  preço FROM produtos;
+
+--função de media: avg
+
+SELECT AVG(preco) AS "média dos preços" FROM produtos;
+SELECT ROUND(AVG(preco),2) AS "média dos preços" FROM produtos;
+
+--função de contagem
+SELECT COUNT(id) AS "Quantidade de produtos" FROM produtos;
+SELECT COUNT(DISTINCT fabricante_id) AS "Quantidade de fabricantes com produtos" FROM produtos;
+
+
+-- operaçõe smatematicas
+
+SELECT nome,preco,quantidade, (preco*quantidade) AS total FROM produtos;
+
+
+
 ```
