@@ -74,4 +74,7 @@ where id = 3;
  UPDATE detalhes SET bilheteria= 150000000.00 , orcamento = 120207127.00
 where id = 4;
 
+SELECT titulo , lancamento, genero_id FROM filmes
+WHERE id IN (2,4);
+
 ```
