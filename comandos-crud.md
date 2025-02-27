@@ -171,4 +171,19 @@ DELETE FROM fabricantes where id = 1;
 
 DELETE FROM produtos WHERE id = 4;
 DELETE FROM fabricantes where id = 3;
+
+
+```
+
+## classificação/ordenação
+
+
+
+```sql
+SELECT nome, preco FROM produtos ORDER BY nome;
+SELECT nome, preco FROM produtos ORDER BY preco;
+SELECT nome, preco FROM produtos ORDER BY preco DESC;
+
+SELECT nome, preco, quantidade FROM produtos 
+WHERE fabricante_id = 5 ORDER BY quantidade;
 ```
