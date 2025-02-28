@@ -86,9 +86,11 @@ SELECT filmes.titulo AS "nome do filme" , detalhes.sinopse
 FROM filmes JOIN detalhes
 ON detalhes.filme_id = filmes.id
 
-SELECT filmes.titulo AS "nome do filme" , detalhes.sinopse AS "resumo do filme" , generos.nome AS genero 
-FROM filmes JOIN detalhes JOIN generos
-ON detalhes.filme_id = filmes.id,
-ON film,es
+SELECT filmes.titulo AS "nome do filme" , detalhes.sinopse AS resumo, generos.nome AS genero 
+FROM filmes 
+JOIN detalhes ON detalhes.filme_id = filmes.id
+JOIN generos ON filmes.genero_id = generos.id;
+
+
 
 ```
